@@ -6,7 +6,13 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        fancy1: ["Climate Crisis"],
+        fancy2: ["Noto Sans JP"],
+        fancy3: ["Rampart One"],
+      },
+    },
   },
   plugins: [],
 }
