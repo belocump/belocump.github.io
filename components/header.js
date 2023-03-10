@@ -7,10 +7,9 @@ export default function Header() {
   return (
     <header>
       <Container>
-        <div>
+      <Navigation />
           <Logo />
-          <Navigation />
-        </div>
+          
       </Container>
     </header>
   )
