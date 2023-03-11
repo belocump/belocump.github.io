@@ -29,14 +29,42 @@
     --space-xl: calc(var(--space-xs) * 4); /* 80-120px */
     --space-jump: clamp(1.25rem, 0.35rem + 3.8vw, 3.75rem); /* 20-60px */
   }
+
+
   
   /* 基本設定 */
   body {
-    color: var(--black);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
-      sans-serif;
-    font-size: var(--body);
+   margin: 20px;;
+   padding: 20px;;
+   /* font-family:, Helvetica, sans-serif; */
+   /* color:#4413d8; */
+   letter-spacing:1px;
+   /* background:#fff url(../images/bg_body.gif) 0 0 repeat-x; */
   }
+
+  main {
+    padding: 64px 0;
+  }
+
+  header {
+    /* background: #eee; */
+    background:#cdeaea url(/bg-head.gif) 0 0 repeat-x;
+    text-align: center;
+    padding: 32px 0;
+  }
+  
+  header img {
+    border-radius: 50%;
+  }
+
+  footer {
+    border-top: 1px solid #ccc;
+    background: #eee;
+    text-align: center;
+    padding: 64px 0;
+  }
+
+
 
 a {
     color: inherit;
@@ -44,12 +72,11 @@ a {
   }
   
 
-.navigation {@apply inline-block py-1 px-10 rounded text-gray-600 hover:bg-gray-100;}
 
 .container {width: 92%;
     max-width: 1152px;
     margin: 0 auto;
-    background-color: bg-gray-900;
+    background-color: bg-gray-500;
 }
 
 .basic {
@@ -59,7 +86,7 @@ a {
   }
   
 .box {
-    composes: basic;
+   
     display: inline-block;
     padding: 1em 2em;
     background-color: var(--gray-75);
@@ -67,6 +94,22 @@ a {
     font-size: var(--small-heading2);
   }
   
+  .list {
+    display: flex;
+    gap: 1.5em;
+    font-size: var(--icon-size, 24px);
+  }
+  
+  .icon{
+    color:#1da1f2;
+    font-size: 2px; 
+  }
+
+  .icon1{
+    color:#a713c8;
+    font-size: 0.5em; 
+  }
+
 
   @media (hover: hover) {
     .list a:hover {

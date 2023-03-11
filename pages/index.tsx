@@ -29,6 +29,8 @@ const Home: NextPage = () => {
         <h1 className='font-fancy2'>coming here</h1>
         {/* <FontAwesomeIcon icon={faStar}/> */}
         <FontAwesomeIcon icon={faTwitter} />
+
+        
        
 
    
