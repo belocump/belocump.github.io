@@ -28,9 +28,7 @@ const Home: NextPage = () => {
         <p>どうぞ。よろしくお願いします。</p>
         <h1 className='font-fancy2'>coming here</h1>
         {/* <FontAwesomeIcon icon={faStar}/> */}
-        <FontAwesomeIcon icon={faTwitter} />
-
-        
+        <FontAwesomeIcon icon={faFacebookF} />
        
 
    
