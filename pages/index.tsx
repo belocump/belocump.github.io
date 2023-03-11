@@ -1,14 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-// import Image from 'next/image'
+import Image from 'next/image'
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faTwitter,
-  faFacebookF,
-  faGithub,
-} from '@fortawesome/free-brands-svg-icons'
-import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 const Home: NextPage = () => {
   return (
@@ -26,14 +19,13 @@ const Home: NextPage = () => {
         <p className='font-fancy3'>サッカーを心から愛しています。</p>
         <br />
         <p>どうぞ。よろしくお願いします。</p>
-        <h1 className='font-fancy2'>coming here</h1>
-        {/* <FontAwesomeIcon icon={faStar}/> */}
-        <FontAwesomeIcon icon={faTwitter} />
-
-        
-       
-
-   
+        <h1 className='font-fancy2'>MyInterest</h1>
+        <Image
+        src="/interest.png"
+        alt=""
+        width={1500}
+        height={1500}
+        />
       </div>
 
     </div>
