@@ -11,15 +11,13 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="flex flex-col items-center justify-center bg-gray-80">
-        <h1 className='font-fancy1'>はじめまして、Belocumpです</h1>
+      <div className="flex flex-col bg-gray-80">
+        <h1 className='font-fancy2 text-3xl'>Belocumpです</h1>
         <br />
-        <p className='font-fancy1'>小学校の教員として、１０年以上働いていました。</p>
-        <p className='font-fancy2'>プログラミングに興味があります。最近はPythonやフロントエンドの技術の勉強をしています。</p>
-        <p className='font-fancy3'>サッカーを心から愛しています。</p>
+        <p className='font-fancy2 text-3xl'>小学校の教員として、１０年以上働いていました。プログラミングに興味があります。最近はPythonやフロントエンドの技術の勉強をしています。サッカーを心から愛しています。</p>
         <br />
-        <p>どうぞ。よろしくお願いします。</p>
-        <h1 className='font-fancy2'>MyInterest</h1>
+        <br/>
+        <h1 className='font-fancy1 text-6xl'>MyInterest</h1>
         <Image
         src="/interest.png"
         alt=""
