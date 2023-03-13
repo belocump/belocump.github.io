@@ -12,9 +12,9 @@ const Home: NextPage = () => {
       </Head>
 
       <div className="flex flex-col bg-gray-80">
-        <h1 className='font-fancy2 text-3xl'>Belocumpです</h1>
+        <h1 className='font-fancy2 text-3xl items-center'>Belocumpです</h1>
         <br />
-        <p className='font-fancy2 text-3xl'>小学校の教員として、１０年以上働いていました。プログラミングに興味があります。最近はPythonやフロントエンドの技術の勉強をしています。サッカーを心から愛しています。</p>
+        <p className='font-fancy2 text-3xl justify-center'>小学校の教員として、１０年以上働いていました。プログラミングに興味があります。最近はPythonやフロントエンドの技術の勉強をしています。サッカーを心から愛しています。</p>
         <br />
         <br/>
         <h1 className='font-fancy1 text-6xl'>MyInterest</h1>
