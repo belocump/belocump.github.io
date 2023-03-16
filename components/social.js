@@ -4,10 +4,11 @@ import {
   faFacebookF,
   faGithub,
 } from '@fortawesome/free-brands-svg-icons'
+// import styles from 'styles/social.module.css'
 
 export default function Social() {
     return (
-      <div className='flex justify-center'>
+      <div>
       <ul className="list">
         <li className=""><a href="https://twitter.com/">
             <FontAwesomeIcon icon={faTwitter} />

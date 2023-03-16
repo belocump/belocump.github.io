@@ -18,6 +18,7 @@ const Home: NextPage = () => {
         <br />
         <br/>
         <h1 className='font-fancy1 text-6xl'>MyInterest</h1>
+        <br/><br/>
         <Image
         src="/interest.png"
         alt=""

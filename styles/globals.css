@@ -34,37 +34,19 @@
   
   /* 基本設定 */
   body {
-   margin: 20px;;
-   padding: 20px;;
+
+   margin: 5px;;
+   padding: 5px;;
    /* font-family:, Helvetica, sans-serif; */
    /* color:#4413d8; */
    letter-spacing:1px;
+   background-color: rgb(222, 190, 206);
    /* background:#fff url(../images/bg_body.gif) 0 0 repeat-x; */
   }
 
   main {
-    padding: 64px 0;
+    padding: 30px 0;
   }
-
-  header {
-    /* background: #eee; */
-    background:#cdeaea url(/bg-head.gif) 0 0 repeat-x;
-    text-align: center;
-    padding: 32px 0;
-  }
-  
-  header img {
-    border-radius: 50%;
-  }
-
-  footer {
-    border-top: 1px solid #ccc;
-    background: #eee;
-    text-align: center;
-    padding: 64px 0;
-  }
-
-
 
 a {
     color: inherit;
@@ -97,11 +79,11 @@ a {
   .list {
     display: flex;
     gap: 1.5em;
-    font-size: var(--icon-size, 24px);
+    font-size: var(--icon-size, 12px);
   }
   
   .icon{
-    color:#1da1f2;
+    color:#3d02ec;
     font-size: 2px; 
   }
 

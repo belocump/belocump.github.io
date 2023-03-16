@@ -21,7 +21,7 @@ export default function Navigation() {
         </Link>
       </li>
       <li>
-        <Link href="/blog">
+        <Link href="/contact">
           <p className="navigation font-fancy1 text-2xl">Contact</p>
         </Link>
       </li>
