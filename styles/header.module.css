@@ -2,6 +2,7 @@
     background:#cdeaea url(/bg-head.gif) 0 0 repeat-x;
     text-align: center;
     padding: 32px 0;
+    /* composes: spaceBetween from 'styles/utils.module.css'; */
   }
  
   .header img {

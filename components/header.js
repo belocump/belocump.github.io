@@ -5,12 +5,15 @@ import styles from 'styles/header.module.css'
 
 export default function Header() {
   return (
-    <header className={styles.header}>
-      <Container>
+    <header>
+
+      <Container large>
+        <div  className={styles.header}>
       <Navigation />
           <Logo />
-          
+          </div>
       </Container>
+
     </header>
   )
 }

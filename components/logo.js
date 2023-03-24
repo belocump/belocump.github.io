@@ -4,11 +4,11 @@ import Image from 'next/image'
 export default function Logo() {
   return (
     <div className="basic max-w-7xl mx-auto px-8 py-6">
-      <Image
+      {/* <Image
        src="/yamada.png"
-       width={130}
-       height={130}
-      />
+       width={530}
+       height={530}
+      /> */}
       <Image
        src="/test.png"
        width={1000}

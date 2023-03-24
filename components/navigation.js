@@ -1,33 +1,31 @@
 import Link from "next/link";
+import styles from 'styles/navigation.module.css'
 
 export default function Navigation() {
   return (
-  
-    <nav className="float-right">
-    <ul>
+    <nav>
+    <ul  className={styles.list}>
       <li>
         <Link href="/">
-          <p className="navigation font-fancy1 text-2xl">Home</p>
+          <p className="font-fancy1">Home</p>
         </Link>
       </li>
       <li>
         <Link href="/about">
-          <p className="navigation font-fancy1 text-2xl">About</p>
+          <p className="font-fancy1">About</p>
         </Link>
       </li>
       <li>
         <Link href="/blog">
-          <p className="navigation font-fancy1 text-2xl">Blog</p>
+          <p className="font-fancy1">Blog</p>
         </Link>
       </li>
       <li>
         <Link href="/contact">
-          <p className="navigation font-fancy1 text-2xl">Contact</p>
+          <p className="font-fancy1">Contact</p>
         </Link>
       </li>
     </ul>
-
   </nav>
-
   );
 }
