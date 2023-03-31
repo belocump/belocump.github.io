@@ -16,7 +16,7 @@ export default function Navigation() {
         </Link>
       </li>
       <li>
-        <Link href="/blog">
+        <Link href="/posts/page/1">
           <p className="font-fancy1">Blog</p>
         </Link>
       </li>
