@@ -35,7 +35,7 @@ const Home: NextPage = ({fourPosts,allTags}:any) => {
 
     <section className="container flex flex-col min-h-screen content-between justify-between mx-auto md:flex-row">
 
-      <div className="bg-gray-300 flex container  flex-col">
+      <div className="bg-gray-100 flex container  flex-col">
 
         <div className='m-10'>
           <h1 className='font-fancy1 font-medium text-center text-4xl mt-5 mb-5'>About Me</h1>
@@ -85,9 +85,10 @@ const Home: NextPage = ({fourPosts,allTags}:any) => {
 
       </div>
 
-      <div className="bg-blue-300 flex container p-10 flex-col items-center">
+      <div className="bg-gray-100 flex container p-10 flex-col items-center">
         <div>
         <h1 className='font-fancy1 text-5xl text-center'>My skills</h1>
+        <br/>
         <br/>
         <Image
         src="/interest.png"
