@@ -3,22 +3,22 @@ import Link from "next/link";
 
 export default function Navigation() {
   return (
-    <nav className="md:ml-auto text-base flex container">
+    <nav className="md:ml-auto md:justify-end text-base flex container">
   
         <Link href="/">
-          <p className="text-2xl font-fancy1 text-gray-900 mr-5 mb-4 hover:text-blue-400 duration-300">Home</p>
+          <p className="text-1xl font-fancy1 text-gray-900 mr-5 mb-4 hover:text-blue-400 duration-300">Home</p>
         </Link>
       
         <Link href="/about">
-          <span className="text-2xl font-fancy1 text-gray-900 mr-5 mb-4 hover:text-blue-400 duration-300">About</span>
+          <span className="text-1xl font-fancy1 text-gray-900 mr-5 mb-4 hover:text-blue-400 duration-300">About</span>
         </Link>
     
         <Link href="/posts/page/1">
-          <p className="text-2xl font-fancy1 text-gray-900 mr-5 mb-4 hover:text-blue-400 duration-300">Blog</p>
+          <p className="text-1xl font-fancy1 text-gray-900 mr-5 mb-4 hover:text-blue-400 duration-300">Blog</p>
         </Link>
      
         <Link href="/contact">
-          <p className="text-2xl font-fancy1 text-gray-900 mb-4 hover:text-blue-400 duration-300">Contact</p>
+          <p className="text-1xl font-fancy1 text-gray-900 mb-4 hover:text-blue-400 duration-300">Contact</p>
         </Link>
   </nav>
   );
