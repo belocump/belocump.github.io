@@ -9,7 +9,7 @@ export default function Footer() {
     
       <div className='container flex mx-auto p-5 flex-col items-center justify-center'>
         <Social />
-        <p className='font-medium my-5'>© 2023 Belocump.com all reserved</p>
+        <p className='text-2xl font-medium my-5'>© 2023 Belocump.com all reserved</p>
       </div>
       
     </footer>

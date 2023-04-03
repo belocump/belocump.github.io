@@ -77,8 +77,8 @@ const BlogTagPageList = ({
       </Head>
 
       <main className="container w-full mt-16">
-        <h1 className="text-5xl font-medium text-center mb-16">
-          {currentTag}について
+        <h1 className="font-fancy1 text-5xl font-medium text-center mb-16">
+          {currentTag}
         </h1>
         <Tag tags={allTags} />
         <section className="sm:grid grid-cols-2 w-5/6 gap-3 mx-auto">
