@@ -66,7 +66,7 @@ const Post = ({post}:any) => {
         </ReactMarkdown>
 
       <Link href="/">
-        <span className="pb-20 block mt-3 text-sky-900">←ホームに戻る</span>
+        <div className="pb-20 mt-10 text-sky-900 float-right">←ホームに戻る</div>
       </Link>
     </div>
   </section>

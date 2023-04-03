@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Navigation() {
   return (
-    <nav className="md:ml-auto text-base flex">
+    <nav className="md:ml-auto text-base flex container">
   
         <Link href="/">
           <p className="text-2xl font-fancy1 text-gray-900 mr-5 mb-4 hover:text-blue-400 duration-300">Home</p>

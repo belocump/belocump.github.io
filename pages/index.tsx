@@ -38,14 +38,17 @@ const Home: NextPage = ({fourPosts,allTags}:any) => {
       <div className="bg-gray-300 flex container  flex-col">
 
         <div className='m-10'>
-          <h1 className='font-fancy1 font-medium text-center text-5xl mt-5 mb-5'>Belocumpです</h1>
+          <h1 className='font-fancy1 font-medium text-center text-4xl mt-5 mb-5'>About Me</h1>
         
-          <p className='font-fancy2 text-3xl mt-10'>小学校の教員として、１０年以上働いていました。プログラミングに興味があります。最近はPythonやフロントエンドの技術の勉強をしています。サッカーを心から愛しています。</p>
+          <p className='text-2xl mt-10'>小学校の教員として、１０年以上働いていました。プログラミングに興味があります。最近はPythonやフロントエンドの技術の勉強をしています。サッカーを心から愛しています。</p>
 
           <div className='flex justify-center'>
-            <button className="bg-blue-500 hover:bg-blue-700 text-white mt-10 font-bold py-2 px-4 rounded">
-            ・・・もっと詳しく
-            </button>
+          <Link
+            href="/about"
+            className="mb-6 lg:w-1/2 mx-auto px-5 block text-right mt-5 text-2xl text-blue-900"
+          >
+            ...もっと詳しく
+          </Link>
           </div>
           
       
@@ -67,20 +70,24 @@ const Home: NextPage = ({fourPosts,allTags}:any) => {
               />
             </div>
           ))}
+
+          <div className='flex justify-center'> 
           <Link
             href="/posts/page/1"
-            className="mb-6 lg:w-1/2 mx-auto px-5 block text-right"
+            className="mb-6 lg:w-1/2 mx-auto px-5 block text-right my-5 text-2xl text-blue-900"
           >
             ...もっと見る
           </Link>
+          </div>
           <Tag tags={allTags} />
+          <br/>
         </div>
 
       </div>
 
       <div className="bg-blue-300 flex container p-10 flex-col items-center">
         <div>
-        <h1 className='font-fancy1 text-6xl text-center'>MyInterest</h1>
+        <h1 className='font-fancy1 text-5xl text-center'>My skills</h1>
         <br/>
         <Image
         src="/interest.png"
