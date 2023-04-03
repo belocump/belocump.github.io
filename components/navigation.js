@@ -6,19 +6,19 @@ export default function Navigation() {
     <nav className="md:ml-auto text-base flex">
   
         <Link href="/">
-          <p className="font-fancy1 text-gray-900 mr-5 mb-4 hover:text-blue-400 duration-300">Home</p>
+          <p className="text-2xl font-fancy1 text-gray-900 mr-5 mb-4 hover:text-blue-400 duration-300">Home</p>
         </Link>
       
         <Link href="/about">
-          <span className="font-fancy1 text-gray-900 mr-5 mb-4 hover:text-blue-400 duration-300">About</span>
+          <span className="text-2xl font-fancy1 text-gray-900 mr-5 mb-4 hover:text-blue-400 duration-300">About</span>
         </Link>
     
         <Link href="/posts/page/1">
-          <p className="font-fancy1 text-gray-900 mr-5 mb-4 hover:text-blue-400 duration-300">Blog</p>
+          <p className="text-2xl font-fancy1 text-gray-900 mr-5 mb-4 hover:text-blue-400 duration-300">Blog</p>
         </Link>
      
         <Link href="/contact">
-          <p className="font-fancy1 text-gray-900 mb-4 hover:text-blue-400 duration-300">Contact</p>
+          <p className="text-2xl font-fancy1 text-gray-900 mb-4 hover:text-blue-400 duration-300">Contact</p>
         </Link>
   </nav>
   );

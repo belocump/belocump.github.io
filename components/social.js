@@ -9,19 +9,19 @@ import {
 export default function Social() {
     return (
       <div>
-      <ul className="list">
-        <li className=""><a href="https://twitter.com/">
+      <ul className="flex">
+        <li className="text-1xl mr-16 hover:text-blue-400 duration-300"><a href="https://twitter.com/">
             <FontAwesomeIcon icon={faTwitter} />
             <span>Twitter</span>
           </a>
         </li>
-  
-        <li className="">
+        <li className="text-1xl mr-16 hover:text-blue-400 duration-300">
           <a href="https://github.com/">
             <FontAwesomeIcon icon={faGithub} />
             <span className="">GitHub</span>
           </a>
         </li>
+       
       </ul>
   
       </div>
