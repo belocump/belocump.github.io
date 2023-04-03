@@ -1,22 +1,16 @@
-import Link from 'next/link'
 import Image from 'next/image'
 
 export default function Logo() {
   return (
-    <div className="basic max-w-7xl mx-auto px-8 py-6">
-      {/* <Image
-       src="/yamada.png"
-       width={530}
-       height={530}
-      /> */}
+    <div className="mx-auto px-4 py-4">
+    
       <Image
        src="/test.png"
+       alt=''
        width={1000}
        height={450}
       />
-    {/* <Link href="/" className='box'>
-      <h1 className='text-6xl font-fancy1'>Belocump</h1>
-    </Link> */}
+
      </div>
   )
 }

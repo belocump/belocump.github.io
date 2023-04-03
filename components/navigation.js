@@ -1,31 +1,25 @@
 import Link from "next/link";
-import styles from 'styles/navigation.module.css'
+// import styles from 'styles/navigation.module.css'
 
 export default function Navigation() {
   return (
-    <nav>
-    <ul  className={styles.list}>
-      <li>
+    <nav className="md:ml-auto text-base flex">
+  
         <Link href="/">
-          <p className="font-fancy1">Home</p>
+          <p className="font-fancy1 text-gray-900 mr-5 mb-4 hover:text-blue-400 duration-300">Home</p>
         </Link>
-      </li>
-      <li>
+      
         <Link href="/about">
-          <p className="font-fancy1">About</p>
+          <span className="font-fancy1 text-gray-900 mr-5 mb-4 hover:text-blue-400 duration-300">About</span>
         </Link>
-      </li>
-      <li>
+    
         <Link href="/posts/page/1">
-          <p className="font-fancy1">Blog</p>
+          <p className="font-fancy1 text-gray-900 mr-5 mb-4 hover:text-blue-400 duration-300">Blog</p>
         </Link>
-      </li>
-      <li>
+     
         <Link href="/contact">
-          <p className="font-fancy1">Contact</p>
+          <p className="font-fancy1 text-gray-900 mb-4 hover:text-blue-400 duration-300">Contact</p>
         </Link>
-      </li>
-    </ul>
   </nav>
   );
 }

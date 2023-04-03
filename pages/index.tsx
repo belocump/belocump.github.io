@@ -11,7 +11,7 @@ import Tag from '../components/Tag/Tag'
 export const getStaticProps:GetStaticProps = async () => {
   // const allPosts = await getAllPosts();
   // 空だと４つの記事　数字で指定することで記事の数が変わる
-  const fourPosts = await getPostsForTopPage();
+  const fourPosts = await getPostsForTopPage(2);
   const allTags = await getAllTags();
 
 return{
@@ -28,6 +28,7 @@ return{
 const Home: NextPage = ({fourPosts,allTags}:any) => {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2">
+
       <Head>
         <title>Belocump.com</title>
         <link rel="icon" href="/favicon.ico" />
@@ -38,15 +39,6 @@ const Home: NextPage = ({fourPosts,allTags}:any) => {
         <br />
         <p className='font-fancy2 text-3xl justify-center'>小学校の教員として、１０年以上働いていました。プログラミングに興味があります。最近はPythonやフロントエンドの技術の勉強をしています。サッカーを心から愛しています。</p>
         <br />
-        <br/>
-        <h1 className='font-fancy1 text-6xl'>MyInterest</h1>
-        <br/><br/>
-        <Image
-        src="/interest.png"
-        alt=""
-        width={1500}
-        height={1500}
-        />
 
 <h1 className="text-5xl font-medium text-center mb-16">
           News
@@ -71,6 +63,16 @@ const Home: NextPage = ({fourPosts,allTags}:any) => {
         </Link>
         <Tag tags={allTags} />
       </div>
+
+      <br/>
+        <h1 className='font-fancy1 text-6xl'>MyInterest</h1>
+        <br/><br/>
+        <Image
+        src="/interest.png"
+        alt=""
+        width={1500}
+        height={1500}
+        />
 
     </div>
   )
