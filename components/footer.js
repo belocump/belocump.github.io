@@ -5,7 +5,7 @@ import Social from 'components/social'
 
 export default function Footer() {
   return (
-    <footer className='bg-red-100'>
+    <footer className='bg-hero-img'>
     
       <div className='container flex mx-auto p-5 flex-col items-center justify-center'>
         <Social />

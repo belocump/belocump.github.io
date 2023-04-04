@@ -5,9 +5,9 @@ export default function Logo() {
     <div className="mx-auto px-4 py-4">
     
       <Image
-       src="/test.png"
+       src="/title.png"
        alt=''
-       width={1000}
+       width={700}
        height={450}
       />
 

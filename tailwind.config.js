@@ -12,6 +12,9 @@ module.exports = {
         fancy2: ["Noto Sans JP"],
         fancy3: ["Rampart One"],
       },
+      backgroundImage: theme => ({
+        'hero-img': "url('/bg-pattern.jpg')",
+       }),
     },
   },
   plugins: [],
