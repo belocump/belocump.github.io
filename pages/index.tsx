@@ -11,7 +11,7 @@ import Tag from '../components/Tag/Tag'
 export const getStaticProps:GetStaticProps = async () => {
   // const allPosts = await getAllPosts();
   // 空だと４つの記事　数字で指定することで記事の数が変わる
-  const fourPosts = await getPostsForTopPage(2);
+  const fourPosts = await getPostsForTopPage(3);
   const allTags = await getAllTags();
 
 return{
@@ -87,7 +87,7 @@ const Home: NextPage = ({fourPosts,allTags}:any) => {
 
       <div className="bg-gray-100 flex container p-10 flex-col items-center">
         <div>
-        <h1 className='font-fancy1 text-5xl text-center'>My skills</h1>
+        <h1 className='font-fancy1 text-5xl text-center'>Interest</h1>
         <br/>
         <br/>
         <Image
