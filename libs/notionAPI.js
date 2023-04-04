@@ -3,35 +3,34 @@ import { Client } from "@notionhq/client";
 import { NotionToMarkdown } from "notion-to-md";
 
 const notion = new Client({
-    auth: process.env.NOTION_TOKEN,
+  auth: process.env.NOTION_TOKEN,
+});
+
+const n2m = new NotionToMarkdown({ notionClient: notion });
+
+export const getAllPosts = async () => {
+  const posts = await notion.databases.query({
+    database_id: process.env.NOTION_DATABASE_ID,
+    page_size: 100,
+    sorts: [{ property: "Date", direction: "descending" }],
   });
 
-  const n2m = new NotionToMarkdown({ notionClient: notion });
+  const allPosts = posts.results;
 
-  export const getAllPosts = async () => {
-
-    const posts = await notion.databases.query({
-        database_id: process.env.NOTION_DATABASE_ID,
-        page_size: 100,
-    });
-
-    const allPosts = posts.results;
-
-    return allPosts.map((post) => {
-      return getPageMataData(post);
-    });
-  };
+  return allPosts.map((post) => {
+    return getPageMataData(post);
+  });
+};
 
 const getPageMataData = (post) => {
   const getTags = (tags) => {
-
     const allTags = tags.map((tag) => {
       return tag.name;
     });
     return allTags;
   };
 
-  return{
+  return {
     id: post.id,
     title: post.properties.Name.title[0].plain_text,
     description: post.properties.Description.rich_text[0].plain_text,
@@ -41,7 +40,7 @@ const getPageMataData = (post) => {
   };
 };
 
-export const getSinglePost = async(slug) => {
+export const getSinglePost = async (slug) => {
   const response = await notion.databases.query({
     database_id: process.env.NOTION_DATABASE_ID,
     filter: {
@@ -66,12 +65,11 @@ export const getSinglePost = async(slug) => {
     metadata,
     markdown: mdString,
   };
-
 };
 
 // TopPage (4つ)　面倒になりそう　pageSize: number
 /* Topページ用記事の取得(4つ) */
-export const getPostsForTopPage = async (pageSize=4) => {
+export const getPostsForTopPage = async (pageSize = 4) => {
   const allPosts = await getAllPosts();
   const fourPosts = allPosts.slice(0, pageSize);
   return fourPosts;
@@ -90,7 +88,7 @@ export const getPostsByPage = async (page) => {
 // ページ数を取得する
 export const getNumberOfPages = async () => {
   const allPosts = await getAllPosts();
-NUMBER_OF_POSTS_PER_PAGE
+  NUMBER_OF_POSTS_PER_PAGE;
   return (
     Math.floor(allPosts.length / NUMBER_OF_POSTS_PER_PAGE) +
     (allPosts.length % NUMBER_OF_POSTS_PER_PAGE > 0 ? 1 : 0)
