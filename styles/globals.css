@@ -2,28 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ブログのマークダウン */
 
 .markdown ol {
-    @apply list-decimal pl-10;
-  }
+  @apply list-decimal pl-10;
+}
 .markdown ul {
-    @apply list-disc pl-10;
-  }
+  @apply list-disc pl-10;
+}
 .markdown h3 {
-    @apply text-lg border-b border-black my-5;
-  }
-  
+  @apply text-lg border-b border-black my-5;
+}
+
 .markdown h2 {
-    @apply border-red-500 border-l-4 text-2xl my-5;
-  }
+  @apply border-red-500 border-l-4 text-2xl my-5;
+}
 .markdown ul {
-    @apply list-disc pl-10;
-  }
+  @apply list-disc pl-10;
+}
 
-  .markdown p {
-    @apply my-5 text-gray-900 font-fancy1;
-  }
+.markdown p {
+  @apply my-5 text-gray-900 font-fancy1;
+}
 
-  .markdown a {
-    @apply my-5 text-blue-900 font-fancy1 hover:text-pink-300;
-  }
+.markdown a {
+  @apply my-5 text-blue-900 font-fancy1 hover:text-pink-300;
+}
+
+/* コンタクトページ */
