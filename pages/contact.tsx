@@ -7,6 +7,10 @@ export default function Home() {
   const messageRef = useRef<HTMLTextAreaElement>(null);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    if (!confirm("メールを送信します。よろしいですか?")) {
+      return;
+    }
+
     e.preventDefault();
 
     // console.log("送信中・・・");
@@ -30,11 +34,12 @@ export default function Home() {
   };
 
   return (
-    <div className="container m-5 h-full w-full mx-auto md:w-1/2">
-      <div className="bg-yellow-50">
-        <h2 className="text-3xl font-fancy1 mb-10 text-center">
+    <div className="container m-3 h-full w-full mx-auto md:w-1/2">
+      <div className="bg-yellow-50 mx-3">
+        <h2 className="text-3xl font-fancy1 mx-2 mb-10 text-center">
           Contact to Belocump
         </h2>
+
         <form
           onSubmit={(e: React.FormEvent<HTMLFormElement>) => handleSubmit(e)}
         >
@@ -46,7 +51,7 @@ export default function Home() {
               お名前
             </label>
             <input
-              className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+              className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 mx-2 leading-tight focus:outline-none focus:bg-white"
               type="text"
               id="name"
               placeholder="（例)　山田　太郎"
@@ -63,7 +68,7 @@ export default function Home() {
               メールアドレス
             </label>
             <input
-              className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+              className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 mx-2 leading-tight focus:outline-none focus:bg-white"
               type="email"
               id="email"
               placeholder="（例)　aaa@aa.com"
@@ -79,7 +84,7 @@ export default function Home() {
               メッセージ
             </label>
             <textarea
-              className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="block mx-2 p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               id="message"
               placeholder="メッセージをここに書いてください"
               required
