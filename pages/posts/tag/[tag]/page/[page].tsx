@@ -15,7 +15,7 @@ import {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const allTags = await getAllTags();
-  let params:any = [];
+  let params: any = [];
 
   await Promise.all(
     allTags.map((tag: string) => {
@@ -35,7 +35,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps = async (context:any) => {
+export const getStaticProps: GetStaticProps = async (context: any) => {
   const currentPage: string = context.params?.page.toString();
   const currentTag: string = context.params?.tag.toString();
 
@@ -67,7 +67,7 @@ const BlogTagPageList = ({
   posts,
   currentTag,
   allTags,
-}:any) => {
+}: any) => {
   return (
     <div className="container h-full w-full mx-auto">
       <Head>
@@ -80,9 +80,9 @@ const BlogTagPageList = ({
         <h1 className="font-fancy1 text-5xl font-medium text-center mb-16">
           {currentTag}
         </h1>
-        <Tag tags={allTags} />
+
         <section className="sm:grid grid-cols-2 w-5/6 gap-3 mx-auto">
-          {posts.map((post:any) => (
+          {posts.map((post: any) => (
             <div key={post.id}>
               <SinglePost
                 title={post.title}
@@ -96,7 +96,7 @@ const BlogTagPageList = ({
           ))}
         </section>
         <Pagination numberOfPage={numberOfPagesByTag} tag={currentTag} />
-        
+        <Tag tags={allTags} />
       </main>
     </div>
   );
