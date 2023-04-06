@@ -27,8 +27,41 @@ export const getStaticProps = async ({ params }: any) => {
 };
 
 const Post = ({ post }: any) => {
+  const H2 = ({ node, ...props }: any) => {
+    return (
+      <div>
+        <h2 id={node.position?.start.line.toString()}>{props.children}</h2>
+      </div>
+    );
+  };
+
+  const ankerLink = ({ node, ...props }: any) => {
+    return (
+      <a
+        className="list-item hover:bg-gray-200"
+        href={"#" + node.position?.start.line.toString()}
+      >
+        {props.children}
+      </a>
+    );
+  };
+
   return (
     <section className="container h-auto lg:px-2 px-5 lg:w-3/5 mx-auto mt-20">
+      <div className="p-3 m-10 bg-gray-100 border border-black border-dashed">
+        目次
+        <ol className="p-2 list-decimal list-inside">
+          <ReactMarkdown
+            allowedElements={["h2"]}
+            components={{
+              h2: ankerLink,
+            }}
+          >
+            {post.markdown}
+          </ReactMarkdown>
+        </ol>
+      </div>
+
       <h2 className="w-full text-3xl font-medium">{post.metadata.title}</h2>
       <div className="border-b-2 w-1/3 mt-1 border-sky-900"></div>
       <span className="text-gray-500">Posted date at {post.metadata.date}</span>
@@ -44,6 +77,7 @@ const Post = ({ post }: any) => {
       <div className="mt-10 font-medium markdown">
         <ReactMarkdown
           components={{
+            h2: H2,
             code({ node, inline, className, children }) {
               const match = /language-(\w+)/.exec(className || "");
               return !inline && match ? (

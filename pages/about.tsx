@@ -23,6 +23,7 @@ const Home: NextPage = () => {
         <p className="font-fancy3">サッカーを心から愛しています。</p>
         <br />
         <p>どうぞ。よろしくお願いします。</p>
+        <Image src="/kanban.png" alt="" width={400} height={200} />
 
         <Image src="/about-page.png" alt="" width={400} height={200} />
       </div>
